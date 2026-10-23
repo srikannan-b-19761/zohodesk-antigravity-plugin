@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "zoho-desk-mcp": {
+      "serverUrl": "https://desk.zohomcp.com/mcp/message"
+    }
+  }
+}

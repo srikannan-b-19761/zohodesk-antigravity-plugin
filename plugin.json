@@ -1,0 +1,29 @@
+{
+  "name": "zoho-desk",
+  "displayName": "Zoho Desk",
+  "version": "1.0.0",
+  "description": "Zoho Desk plugin for Antigravity. Review, prioritize, and update Zoho Desk tickets directly from Antigravity through Zoho Desk MCP and includes a Ticket Prioritization Agent for triage and priority updates.",
+  "suggestedPrompts": [
+    "Prioritize Zoho Desk ticket 12345 and explain the evidence.",
+    "Review this ticket and recommend High, Medium, or Low priority.",
+    "Triage a ticket and recommend the right support team."
+  ],
+  "category": "Productivity",
+  "keywords": [
+    "zoho-desk",
+    "zoho-desk-mcp",
+    "ticket","requests",
+    "ticket-prioritization",
+    "zoho-agents",
+    "zoho-desk-assistant",
+    "portal",
+    "support",
+    "customer-support",
+    "customer-service",
+    "customer-ticket"    
+  ],
+  "author": {
+    "name": "Zoho Desk"
+  },
+  "license": "Proprietary"
+}
