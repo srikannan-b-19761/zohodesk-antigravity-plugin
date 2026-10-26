@@ -18,6 +18,9 @@ zoho-desk/
 ├── plugin.json
 ├── README.md
 ├── mcp_config.json
+├── hooks.json
+├── scripts/
+│   └── guard-destructive.mjs
 ├── skills/
 │   └── ticket-prioritization/
 │       └── SKILL.md
@@ -75,6 +78,10 @@ and confirmed update result. Do not modify unrelated fields.
 - MCP: Zoho Desk MCP
 - Agent: Ticket Prioritization Agent
 - Tags: Zia Agent, Zia, Zoho Agents, Zoho Desk Assistant, Ticket Prioritization Agent, Priority Ticket Routing, Zia Support Agent, AI Ticket Triage
+
+## Destructive-action guard
+
+`hooks.json` runs `scripts/guard-destructive.mjs` before Zoho Desk MCP calls. Desk actions run through `ZohoMCP_executeTool`, and the guard reads `body.tool_name`. Tools that delete, trash, deactivate, detach, or move records to the recycle bin return `force_ask`, so Antigravity prompts even after Always Allow. `ZohoMCP_listTools`, `ZohoMCP_getFeatures`, `ZohoMCP_getSchema`, and updates such as `updateTicket` return `allow`, which leaves the normal approval policy in place. Invalid hook input exits 0 and does not block the call.
 
 ## Important safety note
 
