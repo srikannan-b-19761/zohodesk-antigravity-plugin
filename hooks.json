@@ -1,0 +1,16 @@
+{
+  "guard-destructive": {
+    "PreToolUse": [
+      {
+        "matcher": "ZohoMCP_executeTool|call_mcp_tool|ZohoDesk_.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/scripts/guard-destructive.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
